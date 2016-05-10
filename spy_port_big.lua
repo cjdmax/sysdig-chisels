@@ -91,7 +91,7 @@ function on_event()
 	if res == nil or res <= 0 then
 		return true
 	end
-	if res > bytes then
+	if res < bytes then
     return true
   end
 
