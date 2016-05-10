@@ -91,6 +91,9 @@ function on_event()
 	if res == nil or res <= 0 then
 		return true
 	end
+	if res > bytes then
+    return true
+  end
 
 	if data ~= nil then
 		isread = evt.field(fisread)
@@ -102,10 +105,8 @@ function on_event()
 			direction = DIR_WRITE
 		end
 
-	if res > bytes then
 		print(infostr)
 		print(data)
-	end
 	end
 
 	return true
